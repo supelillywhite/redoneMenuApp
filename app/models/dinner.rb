@@ -1,6 +1,6 @@
 class Dinner < ApplicationRecord
   def mealCost
-    "Your meal will cost $#{Dinner[self.entree.to_sym] + Sides[self.sideOne.to_sym] + Sides[self.sideTwo.to_sym]}"
+    "Your meal will cost $#{Dinner[self.entree.capitalize.to_sym] + Sides[self.sideOne.capitalize.to_sym] + Sides[self.sideTwo.capitalize.to_sym]}"
   end
 
   Dinner = {
